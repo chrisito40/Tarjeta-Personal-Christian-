@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: ´Newsreader´ , sans-serif;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: darkred;
+  padding: 1rem;
+}
+
+.card {
+  background-color: rgb(133, 102, 18);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: chartreuse;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: brown;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+}
