@@ -116,6 +116,22 @@ button {
   stroke: var(--black);
 }
 
+.icon svg {
+  stroke: var(--base);
+}
+
+.theme-icon {
+  display: none;
+}
+
+body:not(.dark) #icon-moon {
+  display: block;
+}
+
+body.dark #icon-sun {
+  display: block;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -289,3 +305,4 @@ button {
   background-color: var(--white);
  }
 }
+

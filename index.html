@@ -19,16 +19,56 @@
   <div class="card">
     <header class="header">
       <div class="brand">
-        <img src="./assets/marca-grafica.svg" alt="Logo Christian" />
+        <img id="logo" src="./assets/marca-grafica.svg" alt="Logo Christian" />
       </div>
-      <button class="icon">
-        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="icon" id="toggle-button">
+        <!-- Icono Light Mode -->
+        <svg class="theme-icon" id="icon-moon" width="72" height="72" viewBox="0 0 72 72" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <path
             d="M70.3536 39.0283C69.7506 45.5534 67.3018 51.7719 63.2936 56.956C59.2854 62.1401 53.8837 66.0756 47.7205 68.3017C41.5573 70.5279 34.8876 70.9528 28.4917 69.5267C22.0959 68.1006 16.2384 64.8824 11.6048 60.2488C6.97121 55.6152 3.75306 49.7578 2.32694 43.3619C0.900815 36.9661 1.3257 30.2963 3.55189 24.1331C5.77807 17.97 9.71348 12.5682 14.8976 8.56005C20.0817 4.55187 26.3002 2.103 32.8253 1.5C29.005 6.66836 27.1667 13.0362 27.6447 19.4454C28.1226 25.8546 30.8851 31.8794 35.4297 36.424C39.9742 40.9685 45.999 43.731 52.4082 44.209C58.8174 44.6869 65.1853 42.8486 70.3536 39.0283Z"
             stroke="inherit" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
+        <!-- Icono Dark Mode -->
+        <svg width="94" height="96" viewBox="0 0 94 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_2082_48)">
+            <path
+              d="M47 63.75C57.3553 63.75 65.75 55.3553 65.75 45C65.75 34.6447 57.3553 26.25 47 26.25C36.6447 26.25 28.25 34.6447 28.25 45C28.25 55.3553 36.6447 63.75 47 63.75Z"
+              stroke="#D7B12D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M47 3.75V11.25" stroke="#D7B12D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M47 78.75V86.25" stroke="#D7B12D" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M17.825 15.825L23.15 21.15" stroke="#D7B12D" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M70.85 68.85L76.175 74.175" stroke="#D7B12D" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M5.75 45H13.25" stroke="#D7B12D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M80.75 45H88.25" stroke="#D7B12D" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M17.825 74.175L23.15 68.85" stroke="#D7B12D" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M70.85 21.15L76.175 15.825" stroke="#D7B12D" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </g>
+          <defs>
+            <filter id="filter0_d_2082_48" x="-2" y="0" width="98" height="98" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2082_48" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2082_48" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+
       </button>
     </header>
+
 
 
 
@@ -49,11 +89,7 @@
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M24.75 12.3542C24.7544 14.059 24.3561 15.7408 23.5875 17.2625C22.6761 19.086 21.2751 20.6198 19.5413 21.692C17.8075 22.7642 15.8094 23.3326 13.7708 23.3334C12.066 23.3378 10.3842 22.9395 8.8625 22.1709L1.5 24.625L3.95417 17.2625C3.18554 15.7408 2.78722 14.059 2.79167 12.3542C2.79246 10.3156 3.36079 8.31754 4.43301 6.58373C5.50523 4.84993 7.039 3.44888 8.8625 2.53752C10.3842 1.76889 12.066 1.37058 13.7708 1.37502H14.4167C17.1089 1.52355 19.6518 2.65992 21.5585 4.56655C23.4651 6.47317 24.6015 9.01607 24.75 11.7084V12.3542Z"
-              stroke="inherit"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              />
+              stroke="inherit" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </a>
       </div>
@@ -62,8 +98,7 @@
     <footer class="footer">
       <div>
         <!-- a*3>img -->
-        <a class="icon" href="https://www.dribble.com" 
-         target="_blank">
+        <a class="icon" href="https://www.dribble.com" target="_blank">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z"
@@ -73,8 +108,7 @@
               stroke="inherit" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </a>
-        <a class="icon" href="https://www.instagram.com"
-         target="_blank">
+        <a class="icon" href="https://www.instagram.com" target="_blank">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M25.5 3H10.5C6.35786 3 3 6.35786 3 10.5V25.5C3 29.6421 6.35786 33 10.5 33H25.5C29.6421 33 33 29.6421 33 25.5V10.5C33 6.35786 29.6421 3 25.5 3Z"
@@ -86,8 +120,7 @@
               stroke-linejoin="round" />
           </svg>
         </a>
-        <a class="icon" href="https://www.linkedin.com"
-        target="_blank">
+        <a class="icon" href="https://www.linkedin.com" target="_blank">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M24 12C26.3869 12 28.6761 12.9482 30.364 14.636C32.0518 16.3239 33 18.6131 33 21V31.5H27V21C27 20.2044 26.6839 19.4413 26.1213 18.8787C25.5587 18.3161 24.7956 18 24 18C23.2044 18 22.4413 18.3161 21.8787 18.8787C21.3161 19.4413 21 20.2044 21 21V31.5H15V21C15 18.6131 15.9482 16.3239 17.636 14.636C19.3239 12.9482 21.6131 12 24 12Z"
@@ -103,7 +136,13 @@
       <p>© 2025</p>
     </footer>
   </div>
+  <script src="./script.js">
+  </script>
 </body>
 
 </html>
+
+
+
+
 
